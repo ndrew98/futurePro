@@ -1,5 +1,6 @@
 import React from "react";
 import { Building, Clock, FileText } from "lucide-react";
+import Marquee from "react-fast-marquee";
 import { assets } from "../assets/assets";
 
 const ServicesSection = () => {
@@ -82,15 +83,17 @@ const ServicesSection = () => {
 
         {/* Industry icons */}
         <div className="mt-16 flex flex-wrap justify-center gap-4">
-          {industries.map((industry, index) => (
-            <div
-              key={index}
-              className="px-6 py-3 bg-gray-100 rounded-full flex items-center gap-2"
-            >
-              {industry.icon}
-              {industry.name}
-            </div>
-          ))}
+          <Marquee>
+            {industries.map((industry, index) => (
+              <div
+                key={index}
+                className="mx-4 px-6 py-3 bg-white shadow-md rounded-full text-gray-700 text-sm font-medium whitespace-nowrap"
+              >
+                {industry.icon}
+                {industry.name}
+              </div>
+            ))}
+          </Marquee>
         </div>
       </div>
     </section>
