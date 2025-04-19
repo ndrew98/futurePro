@@ -34,7 +34,7 @@ function HeroSection() {
                 className="text-center text-black rounded-full px-6 py-3 flex items-center border border-black hover:border-gray-400 transition-colors"
                 style={{
                   backgroundColor: "#40ED8D",
-                  boxShadow: "5px 5px 6px rgba(0, 0, 0, 1)",
+                  boxShadow: "5px 5px 0 0 #000000",
                 }}
               >
                 I'm Hiring
@@ -56,7 +56,7 @@ function HeroSection() {
                 to="/jobseekers"
                 className="bg-white border border-black text-black px-6 py-3 rounded-full flex items-center"
                 style={{
-                  boxShadow: "5px 5px 6px rgba(0, 0, 0, 1)",
+                  boxShadow: "5px 5px 0 0 #000000",
                 }}
               >
                 Find a Job
