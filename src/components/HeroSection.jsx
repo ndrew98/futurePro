@@ -10,7 +10,7 @@ function HeroSection() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-[32px] md:text-6xl font-bold mb-6 hero-main-text  lg:text-[50px] xl:text-[64px]">
               Connecting{" "}
               <span className="text-blue-700 underline decoration-2 underline-offset-4">
                 Talents
@@ -21,7 +21,10 @@ function HeroSection() {
                 Opportunity
               </span>
             </h1>
-            <p className="text-gray-600 text-lg mb-8">
+            <p
+              className="hero-sub-text mb-8"
+              style={{ fontFamily: "Instrument Sans" }}
+            >
               We help professionals and businesses thrive through tailored
               recruitment solutions across London and beyond.
             </p>

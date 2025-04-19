@@ -22,7 +22,7 @@ function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-6 text-[12px] lg:16px xl:text-[16px]">
             <NavLink to="/" className="text-black hover:text-blue-600">
               Home
             </NavLink>

@@ -34,7 +34,7 @@ import samsung_logo from "./samsung_logo.png";
 import adobe_logo from "./adobe_logo.png";
 import amazon_logo from "./amazon_logo.png";
 import company_logo from "./company_logo.png";
-import hero_side from "./hero_side.png";
+import hero_side from "./hero_side.webp";
 import our_story_teamphoto from "./our_story_teamphoto.png";
 import handshake from "./handshake.png";
 import members from "./members.png";

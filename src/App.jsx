@@ -9,7 +9,7 @@ import "./App.css"; // Import your CSS file for styling
 
 const App = () => {
   return (
-    <div className="app-container">
+    <div className="app-container ">
       {/* Navbar component to show on all pages */}
       <Navbar />
 

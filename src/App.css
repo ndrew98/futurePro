@@ -6,6 +6,13 @@
   /* Your other navbar styles */
 }
 
+.navbar-links{
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 23px; 
+}
+
 .main-button{
   border-radius: 100px;
 border: 1px solid #1C2323;
@@ -16,4 +23,18 @@ line-height: 130%;
 /* background: #92FFBF; */
 /* Drop Shadow */
 box-shadow: 4px 4px 0px 0px #1C2323;
+}
+
+.hero-main-text{
+  /* font-size: 64px; */
+  font-weight: 700;
+}
+
+.hero-sub-text{
+  color: #1C2323;
+  font-family: "Instrument Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 26px */
 }
