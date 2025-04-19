@@ -5,6 +5,7 @@ import ApplyJob from "./pages/ApplyJob";
 import Applications from "./pages/Applications";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import "./App.css"; // Import your CSS file for styling
 
 const App = () => {
   return (

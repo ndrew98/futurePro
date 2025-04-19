@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root{
@@ -7,4 +8,8 @@
   --color-graydark : #1C2323;
   --color-background: #E8EFF7;
   --color-text: #333333;
+}
+
+body {
+  font-family: 'Bricolage Grotesque', sans-serif;
 }

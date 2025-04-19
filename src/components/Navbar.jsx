@@ -7,7 +7,7 @@ function Navbar() {
 
   return (
     <nav
-      className="py-4 shadow-sm"
+      className="navbar py-4 shadow-sm"
       style={{ backgroundColor: "var( --color-background)" }}
     >
       <div className="container mx-auto px-4">
@@ -47,20 +47,18 @@ function Navbar() {
           </div>
 
           {/* Auth Buttons - With custom color and dark shadow styling */}
-          <div className="hidden md:flex items-center space-x-3">
+          <div className="hidden md:flex items-center gap-6">
             <Link
               to="/login"
-              className="text-black bg-white border border-gray-300 py-2 px-6 rounded-full hover:border-gray-400 transition-colors"
-              style={{ boxShadow: "5px 5px 6px rgba(0, 0, 0, 1)" }}
+              className="main-button text-black bg-white border border-gray-300 py-2 px-6 rounded-full hover:border-gray-400 transition-colors"
             >
               Login
             </Link>
             <Link
               to="/signup"
-              className="text-black py-2 px-6 rounded-full transition-colors"
+              className=" main-button text-black py-2 px-7 transition-colors"
               style={{
-                boxShadow: "5px 5px 6px rgba(0, 0, 0, 1)",
-                backgroundColor: "#40ED8D",
+                backgroundColor: "#92FFBF",
               }}
             >
               Signup

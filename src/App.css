@@ -1,0 +1,19 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Ensures navbar stays above other content */
+  background-color: #fff; /* Give it a background color so content doesn't show through */
+  /* Your other navbar styles */
+}
+
+.main-button{
+  border-radius: 100px;
+border: 1px solid #1C2323;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 130%;
+/* background: #92FFBF; */
+/* Drop Shadow */
+box-shadow: 4px 4px 0px 0px #1C2323;
+}

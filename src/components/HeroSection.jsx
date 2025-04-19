@@ -4,7 +4,7 @@ import { assets } from "../assets/assets";
 function HeroSection() {
   return (
     <section
-      className="py-16"
+      className="py-20"
       style={{ backgroundColor: "var( --color-background)" }}
     >
       <div className="container mx-auto px-4">
