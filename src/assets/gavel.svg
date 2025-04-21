@@ -1,0 +1,14 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Gavel" clip-path="url(#clip0_308_39)">
+<path id="Vector" d="M15.2942 2.29225L7.29414 10.2923C6.90362 10.6828 6.90362 11.316 7.29414 11.7065L9.29437 13.7067C9.6849 14.0972 10.3181 14.0972 10.7086 13.7067L18.7086 5.7067C19.0991 5.31617 19.0991 4.68301 18.7086 4.29248L16.7084 2.29225C16.3179 1.90173 15.6847 1.90173 15.2942 2.29225Z" stroke="#1C2323" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M26.2943 13.2923L18.2943 21.2923C17.9037 21.6828 17.9037 22.316 18.2943 22.7065L20.2945 24.7067C20.685 25.0972 21.3182 25.0972 21.7087 24.7067L29.7087 16.7067C30.0993 16.3162 30.0993 15.683 29.7087 15.2925L27.7085 13.2923C27.318 12.9017 26.6848 12.9017 26.2943 13.2923Z" stroke="#1C2323" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M18.2075 6.20752L25.7925 13.7925" stroke="#1C2323" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M11.2075 13.2075L18.7925 20.7925" stroke="#1C2323" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M16.5 18.5L7.62499 27.375C7.22669 27.7719 6.6873 27.9948 6.12499 27.9948C5.56268 27.9948 5.02329 27.7719 4.62499 27.375C4.22806 26.9767 4.00519 26.4373 4.00519 25.875C4.00519 25.3127 4.22806 24.7733 4.62499 24.375L13.5 15.5" stroke="#1C2323" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_308_39">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>

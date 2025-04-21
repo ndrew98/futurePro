@@ -1,6 +1,7 @@
 import React from "react";
 import HeroSection from "../components/HeroSection";
-import HeroSection1 from "../components/Hero1";
+
+import Hero from "../components/Hero";
 import AboutSection from "../components/AboutSection";
 import ServicesSection from "../components/ServicesSection";
 import FeaturedJobsSection from "../components/FeaturedJobsSection";
@@ -12,9 +13,9 @@ const Home = () => {
   return (
     <div>
       <HeroSection />
-      {/* <HeroSection1 /> */}
       <AboutSection />
       <ServicesSection />
+      <Hero />
       <FeaturedJobsSection />
       <TestimonialsSection />
       <BlogSection />

@@ -1,0 +1,13 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="HardHat" clip-path="url(#clip0_308_56)">
+<path id="Vector" d="M28 20H4C3.44772 20 3 20.4477 3 21V24C3 24.5523 3.44772 25 4 25H28C28.5523 25 29 24.5523 29 24V21C29 20.4477 28.5523 20 28 20Z" stroke="#1C2323" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M13 20V5C13 4.73478 13.1054 4.48043 13.2929 4.29289C13.4804 4.10536 13.7348 4 14 4H18C18.2652 4 18.5196 4.10536 18.7071 4.29289C18.8946 4.48043 19 4.73478 19 5V20" stroke="#1C2323" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M27 19.9999V16.9999C27.0007 14.6051 26.2198 12.2754 24.7759 10.3647C23.3321 8.45409 21.3041 7.06684 19 6.4137" stroke="#1C2323" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M5 19.9999V16.9999C4.99929 14.6051 5.78018 12.2754 7.22406 10.3647C8.66794 8.45409 10.6959 7.06684 13 6.4137" stroke="#1C2323" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_308_56">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>

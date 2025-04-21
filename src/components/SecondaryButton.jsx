@@ -5,10 +5,7 @@ function SecondaryButton({ to, children }) {
   return (
     <Link
       to={to}
-      className="bg-white border border-black text-black px-6 py-3 rounded-full flex items-center"
-      style={{
-        boxShadow: "5px 5px 0 0 #000000",
-      }}
+      className="bg-white  px-6 py-3 rounded-full flex shadow-[5px_5px_0px_0px_rgba(28,35,35,1.00)] outline-1 tems-center outline-offset-[-1px] outline-neutral-800 text-neutral-800 text-base font-medium font-['Bricolage_Grotesque'] leading-tight "
     >
       {children}
       <svg

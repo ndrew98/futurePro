@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { assets } from "../assets/assets";
 import PrimaryButton from "./PrimaryButton";
 import SecondaryButton from "./SecondaryButton";
@@ -6,10 +5,10 @@ import SecondaryButton from "./SecondaryButton";
 function HeroSection() {
   return (
     <section
-      className="py-20"
+      className="py-20 "
       style={{ backgroundColor: "var(--color-background)" }}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Text Section */}
           <div>
@@ -52,8 +51,8 @@ function HeroSection() {
                 <div className="text-gray-600">Successful Placements</div>
               </div>
               <div className="flex items-center text-primary">
-                <div className="flex items-center gap-2">
-                  <div className="bg-green-500 rounded-full w-2 h-2"></div>
+                <div className="available-btn flex items-center gap-2 ">
+                  <div className=" bg-green-500 rounded-full w-2 h-2"></div>
                   <span>Available 24/7</span>
                 </div>
               </div>

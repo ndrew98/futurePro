@@ -3,16 +3,17 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import ApplyJob from "./pages/ApplyJob";
 import Applications from "./pages/Applications";
-import Navbar from "./components/Navbar";
+
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 import "./App.css"; // Import your CSS file for styling
 
 const App = () => {
   return (
-    <div className="app-container ">
+    <div className="app">
       {/* Navbar component to show on all pages */}
-      <Navbar />
 
+      <Navbar />
       {/* Main content area */}
       <div className="content">
         <Routes>
@@ -21,7 +22,6 @@ const App = () => {
           <Route path="/applications" element={<Applications />} />
         </Routes>
       </div>
-
       {/* Footer component to show on all pages */}
       <Footer />
     </div>

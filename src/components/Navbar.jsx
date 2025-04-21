@@ -2,150 +2,81 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { assets } from "../assets/assets";
 
-function Navbar() {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <nav
-      className="navbar py-4 shadow-sm w-full"
+      className="h-16 px-20 py-3 inline-flex justify-between items-center shadow-sm fixed  z-100 top-0 w-full bg-white"
       style={{ backgroundColor: "var(--color-background)" }}
     >
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img
-              src={assets.company_logo}
-              alt="Future Professionals"
-              className="h-8"
-            />
-          </Link>
+      <Link>
+        <img
+          className="w-16 h-10"
+          src={assets.company_logo}
+          alt="Future Professionals"
+        />
+      </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-6 text-[12px] lg:16px xl:text-[16px]">
-            <NavLink to="/" className="text-black hover:text-blue-600">
+      {/* Desktop Nav */}
+      <div className="flex justify-start items-center gap-6">
+        <div className="self-stretch flex justify-start items-center">
+          <div className="self-stretch px-3 flex justify-center items-center gap-5">
+            <NavLink
+              to="/"
+              className="justify-start text-neutral-800 text-base font-medium font-['Bricolage_Grotesque'] leading-snug "
+            >
               Home
             </NavLink>
-            <NavLink to="/job-board" className="text-black hover:text-blue-600">
+            <NavLink
+              to="/job-board"
+              className="justify-start text-neutral-800 text-base font-medium font-['Bricolage_Grotesque'] leading-snug"
+            >
               Job Board
             </NavLink>
-            <NavLink to="/employers" className="text-black hover:text-blue-600">
+            <NavLink
+              to="/employers"
+              className="justify-start text-neutral-800 text-base font-medium font-['Bricolage_Grotesque'] leading-snug"
+            >
               For Employers
             </NavLink>
             <NavLink
               to="/jobseekers"
-              className="text-black hover:text-blue-600"
+              className="justify-start text-neutral-800 text-base font-medium font-['Bricolage_Grotesque'] leading-snug"
             >
               For Jobseekers
             </NavLink>
-            <NavLink to="/about" className="text-black hover:text-blue-600">
+            <NavLink
+              to="/about"
+              className="justify-start text-neutral-800 text-base font-medium font-['Bricolage_Grotesque'] leading-snug"
+            >
               About Us
             </NavLink>
-            <NavLink to="/blog" className="text-black hover:text-blue-600">
+            <NavLink
+              to="/blog"
+              className="justify-start text-neutral-800 text-base font-medium font-['Bricolage_Grotesque'] leading-snug"
+            >
               Blog
             </NavLink>
           </div>
-
-          {/* Auth Buttons */}
-          <div className="hidden md:flex items-center gap-6">
-            <Link
-              to="/login"
-              className="main-button text-black bg-white border border-gray-300 py-2 px-6 rounded-full hover:border-gray-400 transition-colors"
-            >
-              Login
-            </Link>
-            <Link
-              to="/signup"
-              className="main-button text-black py-2 px-7 transition-colors"
-              style={{ backgroundColor: "#92FFBF" }}
-            >
-              Signup
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-black"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
         </div>
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden mt-4 pt-4 border-t">
-            <Link to="/" className="block py-2 text-black hover:text-blue-600">
-              Home
-            </Link>
-            <Link
-              to="/job-board"
-              className="block py-2 text-black hover:text-blue-600"
-            >
-              Job Board
-            </Link>
-            <Link
-              to="/employers"
-              className="block py-2 text-black hover:text-blue-600"
-            >
-              For Employers
-            </Link>
-            <Link
-              to="/jobseekers"
-              className="block py-2 text-black hover:text-blue-600"
-            >
-              For Jobseekers
-            </Link>
-            <Link
-              to="/about"
-              className="block py-2 text-black hover:text-blue-600"
-            >
-              About Us
-            </Link>
-            <Link
-              to="/blog"
-              className="block py-2 text-black hover:text-blue-600"
-            >
-              Blog
-            </Link>
-
-            <div className="mt-4 flex flex-col space-y-2">
-              <Link
-                to="/login"
-                className="text-center text-black border border-gray-300 py-2 rounded-full hover:border-gray-400"
-                style={{ boxShadow: "0px 2px 4px rgba(0, 0, 0, 1)" }}
-              >
-                Login
-              </Link>
-              <Link
-                to="/signup"
-                className="text-center text-black py-2 rounded-full"
-                style={{
-                  backgroundColor: "#40ED8D",
-                  boxShadow: "0px 3px 6px rgba(0, 0, 0, 1)",
-                }}
-              >
-                Signup
-              </Link>
+        {/* Auth Buttons */}
+        <div className="flex justify-start items-center gap-4">
+          <div className="px-6 py-2 bg-white rounded-[100px] shadow-[4px_4px_0px_0px_rgba(28,35,35,1.00)] outline outline-offset-[-1px] outline-neutral-800 flex justify-center items-center gap-2">
+            <div className="justify-start text-neutral-800 text-base font-medium font-['Bricolage_Grotesque'] leading-tight">
+              Login
             </div>
           </div>
-        )}
+          <div className="px-6 py-2 bg-green-300 rounded-[100px] shadow-[4px_4px_0px_0px_rgba(28,35,35,1.00)] outline outline-offset-[-1px] outline-neutral-800 flex justify-center items-center gap-2">
+            <div className="justify-start text-neutral-800 text-base font-medium font-['Bricolage_Grotesque'] leading-tight">
+              Signup
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

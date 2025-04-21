@@ -43,6 +43,13 @@ import permanent_icon from "./permanent_icon.png";
 import temporary_icon from "./temporary_icon.png";
 import contractual_icon from "./contractual_icon.png";
 import card_image from "./card_image.png";
+import stethoscope from "./stethoscope.svg";
+import coins from "./coins.svg";
+import gavel from "./gavel.svg";
+import crane from "./crane.svg";
+import graduationcap from "./graduationcap.svg";
+import bed from "./bed.svg";
+import hardhat from "./hardhat.svg";
 
 export const assets = {
   logo,
@@ -90,6 +97,13 @@ export const assets = {
   temporary_icon,
   contractual_icon,
   card_image,
+  stethoscope,
+  coins,
+  gavel,
+  crane,
+  graduationcap,
+  bed,
+  hardhat,
 };
 
 export const JobCategories = [
