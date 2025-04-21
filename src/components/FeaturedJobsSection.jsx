@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { MapPin, ChevronRight } from "lucide-react";
 import SecondaryButton from "./SecondaryButton";
+import { assets } from "../assets/assets";
 
 const FeaturedJobsSection = () => {
   const [featuredJobs, setFeaturedJobs] = useState([]);
@@ -93,21 +94,8 @@ const FeaturedJobsSection = () => {
                     <button className="flex-1 px-6 py-3 bg-white rounded-[100px] shadow-[4px_4px_0px_0px_rgba(28,35,35,1.00)]  outline-1 outline-offset-[-1px]text-neutral-800 text-base font-medium font-['Bricolage_Grotesque'] leading-tight outline-neutral-800 flex justify-center items-center gap-2 hover:border-gray-400 transition">
                       Save
                     </button>
-                    <button className="p-2 text-gray-500 hover:text-gray-700">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
-                        />
-                      </svg>
+                    <button className="p-2 text-gray-500 rounded-full border border-gray-400 hover:text-gray-700">
+                      <img src={assets.sharenetwork} alt="SharedNetwork" />
                     </button>
                   </div>
                 </div>

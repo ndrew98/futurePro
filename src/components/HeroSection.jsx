@@ -8,7 +8,7 @@ function HeroSection() {
       className="py-20 "
       style={{ backgroundColor: "var(--color-background)" }}
     >
-      <div className="container mx-auto px-20">
+      <div className=" mx-auto px-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Text Section */}
           <div>

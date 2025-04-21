@@ -19,7 +19,7 @@ const ServicesSection = () => {
       className="py-16 "
       style={{ backgroundColor: "var( --color-background)" }}
     >
-      <div className="container mx-auto px-4">
+      <div className="mx-auto px-20">
         <div className="text-center mb-12">
           <div className=" text-neutral-800 text-base font-semibold font-['Bricolage_Grotesque'] mb-2">
             OUR SERVICES

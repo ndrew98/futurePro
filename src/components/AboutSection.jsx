@@ -6,7 +6,7 @@ function AboutSection() {
       className="about-section py-28 px-20  text-white"
       style={{ backgroundColor: "var( --color-graydark)" }}
     >
-      <div className="container mx-auto px-4">
+      <div className="mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 r">
           <div className="about-image-box rounded-lg overflow-hidden">
             <img src={assets.our_story_teamphoto} alt="" />

@@ -1,6 +1,7 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
 import { assets } from "../assets/assets";
+import SecondaryButton from "./SecondaryButton";
 
 const BlogSection = () => {
   return (
@@ -8,13 +9,15 @@ const BlogSection = () => {
       className="py-16"
       style={{ backgroundColor: "var(--color-background)" }}
     >
-      <div className="container mx-auto px-4">
+      <div className="mx-auto px-20">
         <div className="text-center mb-12">
-          <div className="text-sm text-gray-500 mb-2">INSIGHTS & UPDATES</div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <div className="text-center justify-start text-neutral-800 text-base font-semibold font-['Bricolage_Grotesque']">
+            INSIGHTS & UPDATES
+          </div>
+          <h2 className="w-[878.53px] text-center justify-start text-neutral-800 text-5xl font-bold font-['Bricolage_Grotesque'] mx-auto">
             Your Source for Industry Knowledge and Career Advice
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto">
+          <p className="w-[511.48px]  text-center justify-start text-neutral-800 text-lg font-normal font-['Instrument_Sans'] leading-normal mx-auto">
             Stay ahead of the curve with our latest articles, industry news, and
             expert tips for both clients and candidates.
           </p>
@@ -26,11 +29,8 @@ const BlogSection = () => {
           ))}
         </div>
 
-        <div className="mt-10 text-center">
-          <button className="px-6 py-3 bg-white border border-gray-300 rounded-full inline-flex items-center gap-2 hover:bg-gray-50 transition">
-            See all blogs
-            <ChevronRight className="h-4 w-4" />
-          </button>
+        <div className="mt-10 text-center flex items-center justify-center">
+          <SecondaryButton to="/blog">See all blogs</SecondaryButton>
         </div>
       </div>
     </section>
@@ -39,16 +39,15 @@ const BlogSection = () => {
 
 const BlogCard = ({ image, title, date }) => {
   return (
-    <div
-      className="bg-white rounded-xl overflow-hidden shadow-md border border-black"
-      style={{ boxShadow: "4px 4px 2px rgba(0, 0, 0, 1)" }}
-    >
-      <div className="h-48 overflow-hidden">
+    <div className="bg-white self-stretch p-5 h-96  rounded-[20px] overflow-hidden shadow-[4px_4px_0px_0px_rgba(28,35,35,1.00)] outline-offset-[-1px] outline-neutral-800 ">
+      <div className="self-stretch h-48  overflow-hidden">
         <img src={image} alt={title} className="w-full h-full object-cover" />
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-bold mb-4">{title}</h3>
-        <div className="text-sm text-gray-500">{date}</div>
+        <h3 className="self-stretch  text-2xl font-bold mb-6 ">{title}</h3>
+        <div className=" px-4 py-2 rounded-[100px] text-sm  justify-start border border-neutral-400 w-fit">
+          {date}
+        </div>
       </div>
     </div>
   );

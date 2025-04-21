@@ -50,6 +50,7 @@ import crane from "./crane.svg";
 import graduationcap from "./graduationcap.svg";
 import bed from "./bed.svg";
 import hardhat from "./hardhat.svg";
+import sharenetwork from "./sharenetwork.svg";
 
 export const assets = {
   logo,
@@ -104,6 +105,7 @@ export const assets = {
   graduationcap,
   bed,
   hardhat,
+  sharenetwork,
 };
 
 export const JobCategories = [
