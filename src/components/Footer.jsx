@@ -8,11 +8,11 @@ const Footer = () => {
       className="bg-gray-900 text-white py-8 px-6"
       style={{ backgroundColor: "var(--color-graydark)" }}
     >
-      <div className="container mx-auto">
+      <div className="mx-auto px-20">
         <div className="grid grid-cols-4 gap-8">
           {/* Logo section - left column */}
           <div className="flex flex-col items-center">
-            <div className="mb-4">
+            <div className="mb-4 ">
               <img src={assets.company_logo} alt="" />
             </div>
             <h2 className="text-lg font-bold uppercase tracking-wider">
