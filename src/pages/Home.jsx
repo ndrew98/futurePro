@@ -1,7 +1,5 @@
 import React from "react";
 import HeroSection from "../components/HeroSection";
-
-import Hero from "../components/Hero";
 import AboutSection from "../components/AboutSection";
 import ServicesSection from "../components/ServicesSection";
 import FeaturedJobsSection from "../components/FeaturedJobsSection";
@@ -17,7 +15,7 @@ const Home = () => {
       <ServicesSection />
       <FeaturedJobsSection />
       <TestimonialsSection />
-      <Hero />
+
       <BlogSection />
       <CTASection />
     </div>

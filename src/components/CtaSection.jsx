@@ -4,10 +4,10 @@ import { assets } from "../assets/assets";
 const CTASection = () => {
   return (
     <section
-      className="py-16 "
+      className="pb-16"
       style={{ backgroundColor: "var( --color-background)" }}
     >
-      <div className=" flex items-center justify-center p-20">
+      <div className=" flex items-center justify-center px-20">
         <div
           className="max-w-4xl w-full  rounded-lg text-center p-12 shadow-lg"
           style={{ backgroundColor: "var(--color-graydark)" }}

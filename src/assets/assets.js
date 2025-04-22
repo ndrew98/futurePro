@@ -52,6 +52,11 @@ import bed from "./bed.svg";
 import hardhat from "./hardhat.svg";
 import sharenetwork from "./sharenetwork.svg";
 import arrowcircleupright from "./arrowcircleupright.svg";
+import footer_company_logo from "./footer_company_logo.png";
+import clock from "./clock.svg";
+import phone from "./phone.svg";
+import envelope from "./envelope.svg";
+import mappin from "./mappin.svg";
 
 export const assets = {
   logo,
@@ -108,6 +113,11 @@ export const assets = {
   hardhat,
   sharenetwork,
   arrowcircleupright,
+  footer_company_logo,
+  clock,
+  phone,
+  envelope,
+  mappin,
 };
 
 export const JobCategories = [
