@@ -6,7 +6,9 @@ function HeroSection() {
   return (
     <section
       className="py-20 "
-      style={{ backgroundColor: "var(--color-background)" }}
+      style={{
+        backgroundImage: `url(${assets.white_noise})`,
+      }}
     >
       <div className=" mx-auto px-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">

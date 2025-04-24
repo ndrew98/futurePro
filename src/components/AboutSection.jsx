@@ -4,7 +4,10 @@ function AboutSection() {
   return (
     <section
       className="about-section py-28 px-20  text-white"
-      style={{ backgroundColor: "var( --color-graydark)" }}
+      style={{
+        backgroundColor: "var( --color-graydark)",
+        backgroundImage: `url(${assets.white_noise})`,
+      }}
     >
       <div className="mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 r">

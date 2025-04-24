@@ -57,6 +57,8 @@ import clock from "./clock.svg";
 import phone from "./phone.svg";
 import envelope from "./envelope.svg";
 import mappin from "./mappin.svg";
+import white_noise from "./white_noise.png";
+import black_noise from "./black_noise.png";
 
 export const assets = {
   logo,
@@ -118,6 +120,8 @@ export const assets = {
   phone,
   envelope,
   mappin,
+  white_noise,
+  black_noise,
 };
 
 export const JobCategories = [

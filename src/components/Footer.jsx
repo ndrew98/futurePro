@@ -7,7 +7,10 @@ const Footer = () => {
     <div>
       <div
         className="w-full h-80 px-20 py-12 inline-flex justify-between items-start"
-        style={{ backgroundColor: "var(--color-graydark)" }}
+        style={{
+          backgroundImage: `url(${assets.black_noise})`,
+          backgroundColor: "var(--color-graydark)",
+        }}
       >
         <div className=" inline-flex flex-col justify-start items-start gap-6">
           <img

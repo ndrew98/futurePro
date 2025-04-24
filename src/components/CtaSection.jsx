@@ -5,12 +5,17 @@ const CTASection = () => {
   return (
     <section
       className="pb-16"
-      style={{ backgroundColor: "var( --color-background)" }}
+      style={{
+        backgroundImage: `url(${assets.white_noise})`,
+      }}
     >
       <div className=" flex items-center justify-center px-20">
         <div
           className="max-w-4xl w-full  rounded-lg text-center p-12 shadow-lg"
-          style={{ backgroundColor: "var(--color-graydark)" }}
+          style={{
+            backgroundColor: "var(--color-graydark)",
+            backgroundImage: `url(${assets.white_noise})`,
+          }}
         >
           <div className="mb-2 text-white text-base font-semibold font-['Bricolage_Grotesque'] ">
             GET STARTED TODAY

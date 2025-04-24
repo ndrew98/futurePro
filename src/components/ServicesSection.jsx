@@ -17,7 +17,9 @@ const ServicesSection = () => {
   return (
     <section
       className="py-16 "
-      style={{ backgroundColor: "var( --color-background)" }}
+      style={{
+        backgroundImage: `url(${assets.white_noise})`,
+      }}
     >
       <div className="mx-auto px-20">
         <div className="text-center mb-12">

@@ -40,7 +40,9 @@ const FeaturedJobsSection = () => {
   return (
     <section
       className="w-full px-20 py-28 inline-flex flex-col justify-start items-center gap-12"
-      style={{ backgroundColor: "var( --color-background)" }}
+      style={{
+        backgroundImage: `url(${assets.white_noise})`,
+      }}
     >
       <div className="mx-auto px-4">
         <div className="text-center mb-12">

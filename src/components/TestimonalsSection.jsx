@@ -1,10 +1,13 @@
 import React from "react";
+import { assets } from "../assets/assets";
 
 const TestimonialsSection = () => {
   return (
     <section
       className="w-full p-20 inline-flex flex-col justify-start items-center gap-12"
-      style={{ backgroundColor: "var(--color-background)" }}
+      style={{
+        backgroundImage: `url(${assets.white_noise})`,
+      }}
     >
       <div className="mx-auto flex flex-col">
         <div className="text-center items-center mb-6">

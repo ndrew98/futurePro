@@ -7,8 +7,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className="h-16 px-20 py-3 inline-flex justify-between items-center shadow-sm fixed  z-100 top-0 w-full bg-white"
-      style={{ backgroundColor: "var(--color-background)" }}
+      className="h-16 px-20 py-3 inline-flex justify-between items-center shadow-sm fixed  z-100 top-0 w-full"
+      style={{
+        backgroundImage: `url(${assets.white_noise})`,
+        backgroundColor: "var(--color-background)",
+      }}
     >
       <Link>
         <img
