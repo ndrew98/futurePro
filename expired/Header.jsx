@@ -1,151 +1,172 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { assets } from "../src/assets/assets";
+import { assets } from "../assets/assets";
+import { Menu, X } from "lucide-react";
 
-function Header() {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <nav
-      className="navbar py-4 shadow-sm fixed  z-100 top-0 w-full"
-      style={{ backgroundColor: "var(--color-background)" }}
+      className="h-16 px-4 sm:px-6 md:px-10 lg:px-20 py-3 flex justify-between items-center shadow-sm fixed z-50 top-0 w-full"
+      style={{
+        backgroundImage: `url(${assets.white_noise})`,
+        backgroundColor: "var(--color-background)",
+      }}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-4">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img
-              src={assets.company_logo}
-              alt="Future Professionals"
-              className="h-8"
-            />
-          </Link>
+      <div className="flex items-center">
+        <Link>
+          <img
+            className="w-12 sm:w-14 md:w-16 h-8 sm:h-9 md:h-10"
+            src={assets.company_logo}
+            alt="Future Professionals"
+          />
+        </Link>
+      </div>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-6 text-[12px] lg:16px xl:text-[16px]">
-            <NavLink to="/" className="text-black hover:text-blue-600">
+      {/* Mobile Menu Button */}
+      <button
+        className="md:hidden focus:outline-none"
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+      >
+        {isMenuOpen ? (
+          <X className="w-6 h-6 text-neutral-800" />
+        ) : (
+          <Menu className="w-6 h-6 text-neutral-800" />
+        )}
+      </button>
+
+      {/* Desktop Nav - Hidden on mobile */}
+      <div className="hidden md:flex justify-start items-center gap-3 lg:gap-6">
+        <div className="self-stretch flex justify-start items-center">
+          <div className="self-stretch px-1 lg:px-3 flex justify-center items-center gap-2 lg:gap-5">
+            <NavLink
+              to="/"
+              className="justify-start text-neutral-800 text-sm lg:text-base font-medium font-['Bricolage_Grotesque'] leading-snug"
+            >
               Home
             </NavLink>
-            <NavLink to="/job-board" className="text-black hover:text-blue-600">
+            <NavLink
+              to="/job-board"
+              className="justify-start text-neutral-800 text-sm lg:text-base font-medium font-['Bricolage_Grotesque'] leading-snug"
+            >
               Job Board
             </NavLink>
-            <NavLink to="/employers" className="text-black hover:text-blue-600">
+            <NavLink
+              to="/employers"
+              className="justify-start text-neutral-800 text-sm lg:text-base font-medium font-['Bricolage_Grotesque'] leading-snug"
+            >
               For Employers
             </NavLink>
             <NavLink
               to="/jobseekers"
-              className="text-black hover:text-blue-600"
+              className="justify-start text-neutral-800 text-sm lg:text-base font-medium font-['Bricolage_Grotesque'] leading-snug"
             >
               For Jobseekers
             </NavLink>
-            <NavLink to="/about" className="text-black hover:text-blue-600">
+            <NavLink
+              to="/about"
+              className="justify-start text-neutral-800 text-sm lg:text-base font-medium font-['Bricolage_Grotesque'] leading-snug"
+            >
               About Us
             </NavLink>
-            <NavLink to="/blog" className="text-black hover:text-blue-600">
+            <NavLink
+              to="/blog"
+              className="justify-start text-neutral-800 text-sm lg:text-base font-medium font-['Bricolage_Grotesque'] leading-snug"
+            >
               Blog
             </NavLink>
           </div>
-
-          {/* Auth Buttons */}
-          <div className="hidden md:flex items-center gap-6">
-            <Link
-              to="/login"
-              className="main-button text-black bg-white border border-gray-300 py-2 px-6 rounded-full hover:border-gray-400 transition-colors"
-            >
-              Login
-            </Link>
-            <Link
-              to="/signup"
-              className="main-button text-black py-2 px-7 transition-colors"
-              style={{ backgroundColor: "#92FFBF" }}
-            >
-              Signup
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-black"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
         </div>
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden mt-4 pt-4 border-t">
-            <Link to="/" className="block py-2 text-black hover:text-blue-600">
-              Home
-            </Link>
-            <Link
-              to="/job-board"
-              className="block py-2 text-black hover:text-blue-600"
-            >
-              Job Board
-            </Link>
-            <Link
-              to="/employers"
-              className="block py-2 text-black hover:text-blue-600"
-            >
-              For Employers
-            </Link>
-            <Link
-              to="/jobseekers"
-              className="block py-2 text-black hover:text-blue-600"
-            >
-              For Jobseekers
-            </Link>
-            <Link
-              to="/about"
-              className="block py-2 text-black hover:text-blue-600"
-            >
-              About Us
-            </Link>
-            <Link
-              to="/blog"
-              className="block py-2 text-black hover:text-blue-600"
-            >
-              Blog
-            </Link>
-
-            <div className="mt-4 flex flex-col space-y-2">
-              <Link
-                to="/login"
-                className="text-center text-black border border-gray-300 py-2 rounded-full hover:border-gray-400"
-                style={{ boxShadow: "0px 2px 4px rgba(0, 0, 0, 1)" }}
-              >
-                Login
-              </Link>
-              <Link
-                to="/signup"
-                className="text-center text-black py-2 rounded-full"
-                style={{
-                  backgroundColor: "#40ED8D",
-                  boxShadow: "0px 3px 6px rgba(0, 0, 0, 1)",
-                }}
-              >
-                Signup
-              </Link>
+        {/* Auth Buttons - Desktop */}
+        <div className="flex justify-start items-center gap-2 lg:gap-4">
+          <div className="px-3 lg:px-6 py-1 lg:py-2 bg-white rounded-full shadow-[2px_2px_0px_0px_rgba(28,35,35,1.00)] md:shadow-[4px_4px_0px_0px_rgba(28,35,35,1.00)] outline outline-offset-[-1px] outline-neutral-800 flex justify-center items-center gap-2">
+            <div className="justify-start text-neutral-800 text-sm lg:text-base font-medium font-['Bricolage_Grotesque'] leading-tight">
+              Login
             </div>
           </div>
-        )}
+          <div className="px-3 lg:px-6 py-1 lg:py-2 bg-green-300 rounded-full shadow-[2px_2px_0px_0px_rgba(28,35,35,1.00)] md:shadow-[4px_4px_0px_0px_rgba(28,35,35,1.00)] outline outline-offset-[-1px] outline-neutral-800 flex justify-center items-center gap-2">
+            <div className="justify-start text-neutral-800 text-sm lg:text-base font-medium font-['Bricolage_Grotesque'] leading-tight">
+              Signup
+            </div>
+          </div>
+        </div>
       </div>
+
+      {/* Mobile Menu - Full Width Dropdown */}
+      {isMenuOpen && (
+        <div
+          className="md:hidden absolute top-16 left-0 w-full bg-white border-t border-gray-200 shadow-lg py-4 px-6 z-40"
+          style={{
+            backgroundImage: `url(${assets.white_noise})`,
+            backgroundColor: "var(--color-background)",
+          }}
+        >
+          <NavLink
+            to="/"
+            className="block py-3 text-neutral-800 font-medium font-['Bricolage_Grotesque'] border-b border-gray-100"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/job-board"
+            className="block py-3 text-neutral-800 font-medium font-['Bricolage_Grotesque'] border-b border-gray-100"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Job Board
+          </NavLink>
+          <NavLink
+            to="/employers"
+            className="block py-3 text-neutral-800 font-medium font-['Bricolage_Grotesque'] border-b border-gray-100"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            For Employers
+          </NavLink>
+          <NavLink
+            to="/jobseekers"
+            className="block py-3 text-neutral-800 font-medium font-['Bricolage_Grotesque'] border-b border-gray-100"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            For Jobseekers
+          </NavLink>
+          <NavLink
+            to="/about"
+            className="block py-3 text-neutral-800 font-medium font-['Bricolage_Grotesque'] border-b border-gray-100"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            About Us
+          </NavLink>
+          <NavLink
+            to="/blog"
+            className="block py-3 text-neutral-800 font-medium font-['Bricolage_Grotesque'] border-b border-gray-100"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Blog
+          </NavLink>
+
+          <div className="mt-6 flex flex-col space-y-3">
+            <div className="py-2 bg-white rounded-full shadow-[4px_4px_0px_0px_rgba(28,35,35,1.00)] outline outline-offset-[-1px] outline-neutral-800 flex justify-center items-center">
+              <div className="text-neutral-800 text-base font-medium font-['Bricolage_Grotesque']">
+                Login
+              </div>
+            </div>
+            <div className="py-2 bg-green-300 rounded-full shadow-[4px_4px_0px_0px_rgba(28,35,35,1.00)] outline outline-offset-[-1px] outline-neutral-800 flex justify-center items-center">
+              <div className="text-neutral-800 text-base font-medium font-['Bricolage_Grotesque']">
+                Signup
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
-}
+};
 
-export default Header;
+export default Navbar;

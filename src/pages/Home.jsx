@@ -6,6 +6,7 @@ import FeaturedJobsSection from "../components/FeaturedJobsSection";
 import TestimonialsSection from "../components/TestimonalsSection";
 import BlogSection from "../components/BlogSection";
 import CTASection from "../components/CtaSection";
+import Hero from "../components/Hero";
 
 const Home = () => {
   return (
@@ -15,9 +16,9 @@ const Home = () => {
       <ServicesSection />
       <FeaturedJobsSection />
       <TestimonialsSection />
-
       <BlogSection />
       <CTASection />
+      <Hero />
     </div>
   );
 };
