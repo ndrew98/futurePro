@@ -79,26 +79,26 @@ function HeroSection() {
         </div>
 
         {/* Mobile Layout - Matching Figma Design */}
-        <div className="md:hidden flex px-4 py-20 flex-col justify-start items-start gap-6 mx-auto">
+        <div className="md:hidden flex px-4 py-20 flex-col gap-6 mx-auto">
           {/* Hero Text */}
           <div className="w-full">
-            <h1 className="text-3xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] mb-4 text-neutral-800">
-              Connecting{" "}
-              <span className="text-blue-500 underline text-3xl font-bold font-['Bself-stretch ricolage_Grotesque']">
-                Talents
-              </span>
-              <br />
-              with{" "}
-              <span className="text-blue-500 underline text-3xl font-bold font-['Bricolage_Grotesque']">
-                Opportunity
-              </span>
-            </h1>
+            <div className=" self-stretch mb-6">
+              <h1 className="text-4xl  font-bold font-['Bricolage_Grotesque'] text-neutral-800 sm:text-6xl md:hidden">
+                Connecting{" "}
+                <span className="text-blue-700 underline decoration-2 underline-offset-4">
+                  Talents
+                </span>
+                <span> with </span>
+                <span className="text-blue-700 underline decoration-2 underline-offset-4">
+                  Opportunity
+                </span>
+              </h1>
+            </div>
 
             <p className="self-stretch justify-start text-neutral-800 text-base font-normal font-['Instrument_Sans'] leading-tight mb-6">
               We help professionals and businesses thrive through tailored
               recruitment solutions across London and beyond.
             </p>
-
             {/* Action Buttons - Side by Side */}
             <div className="flex flex-wrap gap-4">
               <PrimaryButton to="/employers">I'm Hiring</PrimaryButton>
