@@ -56,7 +56,7 @@ const TestimonialsSection = () => {
 const MobileTestimonials = ({ testimonials }) => {
   return (
     <div className="w-full overflow-x-auto pb-6">
-      <div className="inline-flex gap-4 px-2 min-w-max">
+      <div className="inline-flex gap-4 min-w-max">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="w-72 flex-shrink-0">
             <TestimonialCard {...testimonial} />

@@ -5,12 +5,12 @@ import { assets } from "../assets/assets";
 const ServicesSection = () => {
   return (
     <section
-      className="py-16"
+      className="py-16 px-4"
       style={{
         backgroundImage: `url(${assets.white_noise})`,
       }}
     >
-      <div className="mx-auto px-20">
+      <div className="mx-auto mb:px-20">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="text-neutral-800 text-base font-semibold font-['Bricolage_Grotesque'] mb-2">
