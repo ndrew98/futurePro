@@ -1,60 +1,104 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { assets } from "../assets/assets";
 
 const TestimonialsSection = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if screen is mobile-sized on initial render
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Set initial state
+    checkScreenSize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", checkScreenSize);
+
+    // Clean up
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   return (
     <section
-      className="w-full p-20 inline-flex flex-col justify-start items-center gap-12"
+      className="w-full p-6 md:p-20 inline-flex flex-col justify-start items-center gap-6 md:gap-12"
       style={{
         backgroundImage: `url(${assets.white_noise})`,
       }}
     >
-      <div className="mx-auto flex flex-col">
+      <div className="mx-auto flex flex-col w-full ">
         <div className="text-center items-center mb-6">
-          <div className="text-center justify-start text-neutral-800 text-base font-semibold font-['Bricolage_Grotesque']">
+          <div className="text-center justify-start text-neutral-800 text-sm md:text-base font-semibold font-['Bricolage_Grotesque']">
             WHAT PEOPLE SAY ABOUT US
           </div>
-          <h2 className="text-center justify-start text-neutral-800 text-5xl font-bold font-['Bricolage_Grotesque'] mb-6">
+          <h2 className="text-center justify-start text-neutral-800 text-3xl md:text-5xl font-bold font-['Bricolage_Grotesque'] mb-4 md:mb-6">
             Real People. Real Results.
           </h2>
-          <p className="w-96 text-center justify-start text-neutral-800 text-lg font-normal font-['Instrument_Sans'] leading-normal mx-auto">
+          <p className="w-full max-w-xs md:max-w-md text-center justify-start text-neutral-800 text-base md:text-lg font-normal font-['Instrument_Sans'] leading-normal mx-auto">
             Here's what others have experienced working with Future
             Professionals Ltd.
           </p>
         </div>
 
-        {/* Grouped testimonials */}
-        <div className="self-stretch flex flex-row gap-5">
-          {/* Group 1: 1st and 2nd */}
-          <div className="flex flex-wrap gap-5 justify-start">
-            <TestimonialCard {...testimonials[0]} />
-            <TestimonialCard {...testimonials[1]} />
-          </div>
-
-          {/* Group 2: 3rd only */}
-          <div className="flex justify-center w-full h-[482px]">
-            <TestimonialCard {...testimonials[2]} />
-          </div>
-
-          {/* Group 3: 4th and 5th */}
-          <div className="flex flex-wrap gap-5 justify-end">
-            <TestimonialCard {...testimonials[3]} />
-            <TestimonialCard {...testimonials[4]} />
-          </div>
-        </div>
+        {/* Testimonial display - desktop vs mobile */}
+        {isMobile ? (
+          <MobileTestimonials testimonials={testimonials} />
+        ) : (
+          <DesktopTestimonials testimonials={testimonials} />
+        )}
       </div>
     </section>
   );
 };
 
+// Mobile version with horizontal scrolling
+const MobileTestimonials = ({ testimonials }) => {
+  return (
+    <div className="w-full overflow-x-auto pb-6">
+      <div className="inline-flex gap-4 px-2 min-w-max">
+        {testimonials.map((testimonial, index) => (
+          <div key={index} className="w-72 flex-shrink-0">
+            <TestimonialCard {...testimonial} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// Desktop version with grouped layout
+const DesktopTestimonials = ({ testimonials }) => {
+  return (
+    <div className="self-stretch flex flex-row gap-5">
+      {/* Group 1: 1st and 2nd */}
+      <div className="flex flex-col gap-5 justify-start">
+        <TestimonialCard {...testimonials[0]} />
+        <TestimonialCard {...testimonials[1]} />
+      </div>
+
+      {/* Group 2: 3rd only */}
+      <div className="flex justify-center w-full">
+        <TestimonialCard {...testimonials[2]} />
+      </div>
+
+      {/* Group 3: 4th and 5th */}
+      <div className="flex flex-col gap-5 justify-end">
+        <TestimonialCard {...testimonials[3]} />
+        <TestimonialCard {...testimonials[4]} />
+      </div>
+    </div>
+  );
+};
+
 const TestimonialCard = ({ rating, content, author, position }) => {
   return (
-    <div className="flex-1 min-w-[300px] self-stretch p-5 bg-blue-50 rounded-[20px] outline-[6px] outline-offset-[-6px] outline-white flex flex-col justify-between items-start gap-6">
-      <div className="px-4 py-2 rounded-full outline-1 outline-neutral-400 inline-flex gap-1">
+    <div className="flex-1 min-w-[270px] self-stretch p-4 md:p-5 bg-blue-50 rounded-[20px] outline-[6px] outline-offset-[-6px] outline-white flex flex-col justify-between items-start gap-4 md:gap-6">
+      <div className="px-3 md:px-4 py-1 md:py-2 rounded-full outline-1 outline-neutral-400 inline-flex gap-1">
         {[...Array(5)].map((_, i) => (
           <svg
             key={i}
-            className={`w-3 h-3 ${
+            className={`w-2 h-2 md:w-3 md:h-3 ${
               i < rating ? "text-orange-400" : "text-gray-300"
             }`}
             fill="currentColor"
@@ -65,13 +109,13 @@ const TestimonialCard = ({ rating, content, author, position }) => {
         ))}
       </div>
 
-      <p className="text-neutral-800 text-base font-normal font-['Instrument_Sans'] leading-tight">
+      <p className="text-neutral-800 text-sm md:text-base font-normal font-['Instrument_Sans'] leading-tight">
         {content}
       </p>
 
-      <div className="inline-flex justify-start items-start gap-2.5">
-        <div className="w-9 h-9 bg-zinc-300 rounded-full flex justify-center items-center">
-          <span className="text-gray-500 font-medium">
+      <div className="inline-flex justify-start items-start gap-2">
+        <div className="w-8 h-8 md:w-9 md:h-9 bg-zinc-300 rounded-full flex justify-center items-center">
+          <span className="text-gray-500 text-xs md:text-sm font-medium">
             {author
               .split(" ")
               .map((n) => n[0])
@@ -79,7 +123,7 @@ const TestimonialCard = ({ rating, content, author, position }) => {
           </span>
         </div>
         <div className="inline-flex flex-col justify-start items-start">
-          <div className="text-neutral-800 text-sm font-semibold font-['Bricolage_Grotesque'] leading-tight">
+          <div className="text-neutral-800 text-xs md:text-sm font-semibold font-['Bricolage_Grotesque'] leading-tight">
             {author}
           </div>
           <div className="text-neutral-800 text-xs font-normal font-['Instrument_Sans'] leading-none">
