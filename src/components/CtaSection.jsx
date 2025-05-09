@@ -73,7 +73,8 @@ const CTASection = () => {
                 Sign me up
               </span>
               <div className="w-6 h-6 relative overflow-hidden">
-                <div className="w-5 h-5 absolute left-[2.25px] top-[2.25px] bg-neutral-800" />
+                <div className="w-5 h-5 absolute left-[2.25px] top-[2.25px] " />{" "}
+                <img src={assets.arrowcircleupright} alt="arrow_sign" />
               </div>
             </button>
           </div>
