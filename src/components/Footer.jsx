@@ -4,126 +4,78 @@ import { assets } from "../assets/assets";
 
 const Footer = () => {
   return (
-    <div>
-      <div
-        className="w-full h-80 px-20 py-12 inline-flex justify-between items-start"
-        style={{
-          backgroundImage: `url(${assets.black_noise})`,
-          backgroundColor: "var(--color-graydark)",
-        }}
-      >
-        <div className=" inline-flex flex-col justify-start items-start gap-6">
-          <img
-            src={assets.footer_company_logo}
-            alt=""
-            className="mx-auto h-36"
-          />
+    <div
+      className="w-full px-4 py-12 md:px-20 md:py-12 grid grid-cols-1 md:grid-cols-4 gap-8"
+      style={{
+        backgroundImage: `url(${assets.black_noise})`,
+        backgroundColor: "var(--color-graydark)",
+      }}
+    >
+      {/* Logo and Copyright */}
+      <div className="flex flex-col items-start gap-6">
+        <img
+          src={assets.footer_company_logo}
+          alt="Company Logo"
+          className="w-72 h-40"
+        />
+        <div className="text-blue-50 text-xs leading-none space-y-1">
+          <div>© 2025 Future Professionals Ltd. All rights reserved.</div>
+          <div>Registered in England & Wales.</div>
+        </div>
+      </div>
 
-          <div className="self-stretch flex flex-col justify-start items-start">
-            <div className="self-stretch justify-start text-blue-50 text-xs font-normal font-['Instrument_Sans'] leading-none">
-              © 2025 Future Professionals Ltd. All rights reserved.
-            </div>
-            <div className="self-stretch justify-start text-blue-50 text-xs font-normal font-['Instrument_Sans'] leading-none">
-              Registered in England & Wales.
-            </div>
+      {/* Quick Links */}
+      <div className="flex flex-col gap-4">
+        <h3 className="text-blue-50 text-base font-semibold">Quick Links</h3>
+        <div className="flex flex-col gap-1">
+          {["Home", "About Us", "Our Services", "Job Board"].map(
+            (link, idx) => (
+              <a
+                key={idx}
+                href="#"
+                className="text-blue-50 text-sm hover:text-blue-300"
+              >
+                {link}
+              </a>
+            )
+          )}
+        </div>
+      </div>
+
+      {/* Get in Touch */}
+      <div className="flex flex-col gap-4">
+        <h3 className="text-blue-50 text-base font-semibold">Get in Touch</h3>
+        <div className="space-y-3 text-blue-50 text-sm">
+          <div className="flex gap-2 items-start">
+            <MapPin className="w-5 h-5 text-blue-50" />
+            <p>9-17 Queens Court, Eastern Road, Romford, Essex RM1 3NG</p>
+          </div>
+          <div className="flex gap-2 items-center">
+            <Clock className="w-5 h-5 text-blue-50" />
+            <p>MON – FRI : 08:00am – 05:00pm</p>
+          </div>
+          <div className="flex gap-2 items-center">
+            <Phone className="w-5 h-5 text-blue-50" />
+            <p>020 3815 9492</p>
+          </div>
+          <div className="flex gap-2 items-center">
+            <Mail className="w-5 h-5 text-blue-50" />
+            <p>info@futureprofessionalsltd.co.uk</p>
           </div>
         </div>
-        <div className="inline-flex flex-col justify-start items-start gap-4">
-          <div className="justify-start text-blue-50 text-base font-semibold font-['Bricolage_Grotesque'] leading-tight">
-            Quick Links
-          </div>
-          <div className="flex flex-col justify-center items-start gap-1">
-            <div className="inline-flex justify-center items-center gap-2.5">
-              <div className="justify-start text-blue-50 text-sm font-normal font-['Instrument_Sans'] leading-tight">
-                Home
-              </div>
-            </div>
-            <div className="inline-flex justify-center items-center gap-2.5">
-              <div className="justify-start text-blue-50 text-sm font-normal font-['Instrument_Sans'] leading-tight">
-                About Us
-              </div>
-            </div>
-            <div className="inline-flex justify-center items-center gap-2.5">
-              <div className="justify-start text-blue-50 text-sm font-normal font-['Instrument_Sans'] leading-tight">
-                Our Services
-              </div>
-            </div>
-            <div className="inline-flex justify-center items-center gap-2.5">
-              <div className="justify-start text-blue-50 text-sm font-normal font-['Instrument_Sans'] leading-tight">
-                Job Board
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="w-60 inline-flex flex-col justify-start items-start gap-4">
-          <div className="self-stretch justify-start text-blue-50 text-base font-semibold font-['Bricolage_Grotesque'] leading-tight">
-            Get in Touch
-          </div>
-          <div className="self-stretch flex flex-col justify-start items-start gap-3">
-            <div className="self-stretch inline-flex justify-start items-start gap-2.5">
-              <div>
-                <img src={assets.mappin} alt="" />
-              </div>
-              <div className="flex-1 justify-start text-blue-50 text-sm font-normal font-['Instrument_Sans'] leading-tight">
-                9-17 Queens Court, Eastern Road, Romford, Essex RM1 3NG
-              </div>
-            </div>
-            <div className="self-stretch inline-flex justify-start items-center gap-2.5">
-              <div>
-                <img src={assets.clock} alt="" />
-              </div>
-              <div className="flex-1 justify-start text-blue-50 text-sm font-normal font-['Instrument_Sans'] leading-tight">
-                MON – FRI : 08:00am – 05:00pm
-              </div>
-            </div>
-            <div className="inline-flex justify-start items-center gap-2.5">
-              <div>
-                <img src={assets.phone} alt="" />
-              </div>
-              <div className="justify-start text-blue-50 text-sm font-normal font-['Instrument_Sans'] leading-tight">
-                020 3815 9492
-              </div>
-            </div>
-            <div className="self-stretch inline-flex justify-start items-center gap-2.5">
-              <div>
-                <img src={assets.envelope} alt="" />
-              </div>
-              <div className="justify-start text-blue-50 text-sm font-normal font-['Instrument_Sans'] leading-tight">
-                info@futureprofessionalsltd.co.uk
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="inline-flex flex-col justify-start items-start gap-4">
-          <div className="self-stretch justify-start text-blue-50 text-base font-semibold font-['Bricolage_Grotesque'] leading-tight">
-            Connect With Us
-          </div>
-          <div className="inline-flex justify-start items-start gap-5">
-            <div className="flex justify-center items-center gap-2.5">
-              <p>
-                <a
-                  href="#"
-                  className="text-white text-sm font-normal font-['Instrument_Sans'] leading-tight"
-                >
-                  LinkedIn
-                </a>
-                <span className="mx-2 text-white">|</span>
-                <a
-                  href="#"
-                  className="text-white text-sm font-normal font-['Instrument_Sans'] leading-tight"
-                >
-                  Facebook
-                </a>
-                <span className="mx-2 text-white">|</span>
-                <a
-                  href="#"
-                  className="text-white text-sm font-normal font-['Instrument_Sans'] leading-tight"
-                >
-                  Instagram
-                </a>
-              </p>
-            </div>
-          </div>
+      </div>
+
+      {/* Connect With Us */}
+      <div className="flex flex-col gap-4">
+        <h3 className="text-blue-50 text-base font-semibold">
+          Connect With Us
+        </h3>
+        <div className="flex gap-4 text-sm text-blue-50">
+          {["LinkedIn", "Facebook", "Instagram"].map((platform, idx) => (
+            <a key={idx} href="#" className="hover:text-blue-300">
+              {platform}
+            </a>
+          ))}
         </div>
       </div>
     </div>

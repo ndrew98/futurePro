@@ -6,7 +6,6 @@ import FeaturedJobsSection from "../components/FeaturedJobsSection";
 import TestimonialsSection from "../components/TestimonalsSection";
 import BlogSection from "../components/BlogSection";
 import CTASection from "../components/CtaSection";
-import Hero from "../components/Hero";
 
 const Home = () => {
   return (
@@ -18,7 +17,6 @@ const Home = () => {
       <TestimonialsSection />
       <BlogSection />
       <CTASection />
-      <Hero />
     </div>
   );
 };
